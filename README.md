@@ -11,10 +11,14 @@ Mira **Deployment** para conocer como desplegar el proyecto.
 
 ### Pre-requisitos 📋
 
-_Que cosas necesitas para instalar el software y como instalarlas_
+_Para correr la app necesitas:_
 
 ```
-Da un ejemplo
+-MySQL instalado en versión 5 o más actual
+-PHP instalado en versión 7 o más actual
+-Apache web server, cualquier versión
+-O XAMPP, WAMPP que tienen todo este stack
+-Node JS instalado en versión 9 mínimo
 ```
 
 ### Instalación 🔧
@@ -83,14 +87,12 @@ Usamos [SemVer](http://semver.org/) para el versionado. Para todas las versiones
 
 _Menciona a todos aquellos que ayudaron a levantar el proyecto desde sus inicios_
 
-* **Andrés Villanueva** - *Trabajo Inicial* - [villanuevand](https://github.com/villanuevand)
-* **Fulanito Detal** - *Documentación* - [fulanitodetal](#fulanito-de-tal)
-
+* **Jimmy Vasquez** - *Trabajo Inicial* - [JimmyVazz](https://github.com/JimmyVazz/)
 También puedes mirar la lista de todos los [contribuyentes](https://github.com/your/project/contributors) quíenes han participado en este proyecto. 
 
 ## Licencia 📄
 
-Este proyecto está bajo la Licencia (Tu Licencia) - mira el archivo [LICENSE.md](LICENSE.md) para detalles
+Este proyecto está bajo la Licencia (MIT LICENCE) - mira el archivo [LICENSE.md](LICENSE.md) para detalles
 
 ## Expresiones de Gratitud 🎁
 
@@ -102,4 +104,4 @@ Este proyecto está bajo la Licencia (Tu Licencia) - mira el archivo [LICENSE.md
 
 
 ---
-⌨️ con ❤️ por [Villanuevand](https://github.com/Villanuevand) 😊
+⌨️ con ❤️ por [JimmyVazz](https://github.com/JimmyVazz/) 😊

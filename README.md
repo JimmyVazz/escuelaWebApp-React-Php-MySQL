@@ -1,6 +1,6 @@
 # Aplicación Web "Escuela Tec MTTY"
 
-_-Aplicación para manejo de inscripciones, pagos, calificaciones e historial académico.
+-Aplicación para manejo de inscripciones, pagos, calificaciones e historial académico.
 
 ## Comenzando 🚀
 
@@ -11,7 +11,7 @@ Mira **Deployment** para conocer como desplegar el proyecto.
 
 ### Pre-requisitos 📋
 
-_Para correr la app necesitas:_
+Para correr la app necesitas:
 
 ```
 -MySQL instalado en versión 5 o más actual
@@ -23,24 +23,8 @@ _Para correr la app necesitas:_
 
 ### Instalación 🔧
 
-Para instalar y configurar la app sigue los siguientes pasos: _
-
-_Dí cómo será ese paso_
-
-```
-Da un ejemplo
-```
-
-_Y repite_
-
-```
-hasta finalizar
-```
-
-_Finaliza con un ejemplo de cómo obtener datos del sistema o como usarlos para una pequeña demo_
-
-
-## Deployment 📦
+Para instalar y configurar la app:
+### Deployment 📦
 
 ```
 -Crear cuenta en [000Webhost](https://www.000webhost.com/)

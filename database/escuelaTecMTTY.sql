@@ -30,14 +30,13 @@ FOREIGN KEY (folioAspirante) references datosAspirante(folioAspirante)
 );
 
 create table datosFinancierosA(
-folioAspirante int,
+folioAspi int,
 montoIngresoM float (10),
 direccion varchar(40),
 cantidadHerm int,
 cantidadPCasa int,
 padreTutor varchar(30),
-FOREIGN KEY (folioAspirante) references datosAspirante(datosAspirante),
-FOREIGN KEY (direccion) references datosAspirante(direccion)
+FOREIGN KEY (folioAspi) references datosAspirante(folioAspirante)
 );
 
 create table alumnosInscritos(
@@ -56,25 +55,24 @@ promedio float(10) NULL
 );
 
 create table datosPadresA(
-    matriculaAlumno varchar(30),
+    matriculaAlum varchar(30),
     nombrePadre varchar(30),
     apepatPadre varchar(20),
     apematPadre varchar(30),
     parentesco varchar(20),
     celular varchar (10),
     direccion varchar(40),
-    FOREIGN KEY (matriculaAlumno) references alumnosInscritos(matriculaAlumno)
+    FOREIGN KEY (matriculaAlum) references alumnosInscritos(matriculaAlumno)
 );
 
 
 create table curriculas(
   folioCurricula int,
-  idMateria int (10),
+  idMate int (10),
   grado enum('Primero', 'Segundo', 'Tercero'),
-    FOREIGN KEY (idMateria) references materias(idMateria),
-    PRIMARY KEY(folioCurricula),
-    FOREIGN KEY (grado) references alumnosInscrito(grado)
-
+  PRIMARY KEY(folioCurricula),
+    FOREIGN KEY (idMate) references materias(idMateria)
+    
 );
 
 CREATE TABLE profesores(
@@ -98,9 +96,9 @@ PRIMARY KEY (idMateria),
 FOREIGN KEY (noCuentaProfesor) references profesores(noCuenta));
 
 create table becas(
-    tipoBeca enum ('100%', '75%', '50%', '25%', 'Ninguna')
-    matriculaAlumno varchar(30),
-    FOREIGN KEY (matriculaAlumno) references alumnosInscritos(matriculaAlumno);
+    tipoBeca enum ('100%', '75%', '50%', '25%', 'Ninguna'),
+    matriculaAlum varchar(30),
+    FOREIGN KEY (matriculaAlum) references alumnosInscritos(matriculaAlumno)
 );
 
 CREATE TABLE calificaciones(
@@ -110,13 +108,13 @@ cal1P float (10),
 cal2P float (10),
 ordinario float (10),
 estado varchar (10),
-idMateria int (10),
-noCuentaProfesor varchar (10),
-noCuentaAlumno varchar (10),
+idMate int (10),
+noCuentaProfe varchar (10),
+matriculaAlum varchar (30),
 PRIMARY KEY (folio),
-FOREIGN KEY (idMateria) references materias(idMateria),
-FOREIGN KEY (noCuentaProfesor) references profesores(noCuenta),
-FOREIGN KEY (noCuentaAlumno) references alumnos(noCuenta));
+FOREIGN KEY (idMate) references materias(idMateria),
+FOREIGN KEY (noCuentaProfe) references profesores(noCuenta),
+FOREIGN KEY (matriculaAlum) references alumnosInscritos(matriculaAlumno));
 
 create table costosEscuela(
   costoInscripcion float(10),
@@ -127,9 +125,7 @@ create table pagos(
     tipoPago enum('Inscripcion', 'Mensualidad'),
     monto float(10),
     fechaPago datetime,
-    matriculaAlumno varchar(30),
-    tipoBeca enum ('100%', '75%', '50%', '25%', 'Ninguna')
-    FOREIGN KEY (matriculaAlumno) references alumnosInscritos(matriculaAlumno),
-    FOREIGN KEY (tipoBeca) references becas(tipoBeca);
+    matriculaAlum varchar(30),
+    tipoBeca enum ('100%', '75%', '50%', '25%', 'Ninguna'),
+    FOREIGN KEY (matriculaAlum) references alumnosInscritos(matriculaAlumno)
 );
-

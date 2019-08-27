@@ -24,6 +24,14 @@ Para correr la app necesitas:
 ### Instalación 🔧
 
 Para instalar y configurar la app:
+```
+-Abre una consola, muevete al directorio de proyectoEscuela y entra a /app/, dentro de app corre:
+    npm install    
+```
+```
+-Dentro de app para iniciar la app corre:
+    npm start
+```
 ### Deployment 📦
 
 ```

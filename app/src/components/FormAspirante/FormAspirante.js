@@ -5,12 +5,12 @@ class FormAspirante extends Component{
     constructor(){
         super();
         this.state = {
-            nombre:"Nombre del aspirante",
-            apepat:"Apellido Paterno",
-            apemat:"Apellido Materno",
-            email:"E-mail",
-            direccion: "Direccion",
-            anioIngreso: "Año deseado a ingresar"
+            nombre:"",
+            apepat:"",
+            apemat:"",
+            email:"",
+            direccion: "",
+            gradoIngreso: ""
         }
     }
 
@@ -20,39 +20,30 @@ class FormAspirante extends Component{
 
     handleSubmit = (event) => {
         event.preventDefault();
-        const { nombre , apepat , apemat , email, direccion, anioIngreso} = this.state
+        const { nombre , apepat , apemat , email, direccion, gradoIngreso} = this.state
 
         fetch('http://localhost/proyectoEscuela/api/datosAspirante/create.php',{
             method:"POST",
-            body: JSON.stringify({ nombre , apepat , apemat , email, direccion, anioIngreso})
+            body: JSON.stringify({ nombre , apepat , apemat , email, direccion, gradoIngreso})
         }).then(response => {
             console.log(response)
         });
     }
 
     render(){
-        const {nombre , apepat , apemat , email, direccion, anioIngreso} = this.state
+        const {nombre , apepat , apemat , email, direccion, gradoIngreso} = this.state
         return(
             <div className="container">
                 <div className="row">
                     <div className="col-12 col-sm-6 offset-sm-3 py-3">
                         <form onSubmit={this.handleSubmit} className="border border-dark shadow rounded p-3">
                             <div className="form-group">
-                                <label htmlFor="name">Nombre</label>
-                                <input id="name" 
-                                name="name" 
+                                <label htmlFor="nombre">Nombre</label>
+                                <input id="nombre" 
+                                name="nombre" 
                                 type="text" 
                                 className="form-control"
                                 value={nombre}
-                                onChange={this.handleChange}/>
-                            </div>
-                            <div className="form-group">
-                                <label htmlFor="Paterno">Apellido Paterno</label>
-                                <input id="apepat" 
-                                name="apepat" 
-                                type="text" 
-                                className="form-control"
-                                value={apepat}
                                 onChange={this.handleChange}/>
                             </div>
                             <div className="form-group">
@@ -65,7 +56,16 @@ class FormAspirante extends Component{
                                 onChange={this.handleChange}/>
                             </div>
                             <div className="form-group">
-                                <label htmlFor="image">E-mail</label>
+                                <label htmlFor="apemat">Apellido Materno</label>
+                                <input id="apemat" 
+                                name="apemat" 
+                                type="text" 
+                                className="form-control"
+                                value={apemat}
+                                onChange={this.handleChange}/>
+                            </div>
+                            <div className="form-group">
+                                <label htmlFor="email">E-mail</label>
                                 <input id="email" 
                                 name="email" 
                                 type="text" 
@@ -74,7 +74,7 @@ class FormAspirante extends Component{
                                 onChange={this.handleChange}/>
                             </div>
                             <div className="form-group">
-                                <label htmlFor="image">Direccion</label>
+                                <label htmlFor="direccion">Direccion</label>
                                 <input id="direccion" 
                                 name="direccion" 
                                 type="text" 
@@ -83,12 +83,12 @@ class FormAspirante extends Component{
                                 onChange={this.handleChange}/>
                             </div>
                             <div className="form-group">
-                                <label htmlFor="image">Año a ingresar</label>
-                                <input id="anioIngreso" 
-                                name="anioIngreso" 
+                                <label htmlFor="gradoIngreso">Año a ingresar</label>
+                                <input id="gradoIngreso" 
+                                name="gradoIngreso" 
                                 type="text" 
                                 className="form-control"
-                                value={anioIngreso}
+                                value={gradoIngreso}
                                 onChange={this.handleChange}/>
                             </div>
                             <button type="submit" className="btn btn-outline-success">Registrarme</button>

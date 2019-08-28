@@ -40,7 +40,7 @@ if(
     $datoAspirante->gradoIngreso = $data->gradoIngreso;
  
     // create the product
-    if($product->create()){
+    if($datoAspirante->create()){
  
         // set response code - 201 created
         http_response_code(201);

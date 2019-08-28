@@ -59,7 +59,7 @@ class DatoAspirante{
     $this->gradoIngreso=htmlspecialchars(strip_tags($this->gradoIngreso));
  
     // bind values
-    $stmt->bindParam(":folioAspirante", $this->name);
+    $stmt->bindParam(":folioAspirante", $this->folioAspirante);
     $stmt->bindParam(":nombre", $this->nombre);
     $stmt->bindParam(":apepat", $this->apepat);
     $stmt->bindParam(":apemat", $this->apemat);

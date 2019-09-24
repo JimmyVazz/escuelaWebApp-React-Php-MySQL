@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import { BrowserRouter as Router, Route, Link} from 'react-router-dom'
 import FormAspirante from '../FormAspirante/FormAspirante'
+import Home from '../Home/Home'
+import FormLogin from '../FormLogin/FormLogin'
 
 class Navbar extends Component {
     render(){
@@ -17,7 +19,7 @@ class Navbar extends Component {
                   <Link className="nav-link" to="/">Inicio <span className="sr-only">(current)</span></Link>
                 </li>
                 <li className="nav-item">
-                  <Link className="nav-link" to="/form/">Inscribirse</Link>
+                  <Link className="nav-link" to="/inscripcion/">Inscribirse</Link>
                 </li>
                 <li className="nav-item">
                   <Link className="nav-link" to="/login/">Iniciar Sesión</Link>
@@ -29,9 +31,10 @@ class Navbar extends Component {
             </div>
           </nav>
           {/* <Route path="/" exact component={}/> */}
-          <Route path="/" component={FormAspirante}/>
-          {/* <Route path="/login/" component={FormLogin}/>
-          <Route path="/contact/" component={Contact}/> */}
+          <Route exact path="/" component={Home}/>
+          <Route exact path="/inscripcion/" component={FormAspirante} />
+          <Route path="/login/" component={FormLogin}/>
+          {/* <Route path="/contact/" component={Contact}/> */}
           </Router>
         )
     }

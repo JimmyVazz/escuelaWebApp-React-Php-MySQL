@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-class FormLogin extends Component {
+class TableAspirante extends Component {
     render(){
         return(
           <div>
@@ -9,5 +9,5 @@ class FormLogin extends Component {
         );
       }
     }
-export default FormLogin
+export default TableAspirante
 
